@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAI ATTIVIT&Agrave;</title>
+    <link rel="stylesheet" href="style2.css">
+    <script>
+  window.onload = function () {
+    const userAgent = navigator.userAgent.toLowerCase();
+
+    const isMobile = /iphone|ipod|android.*mobile|windows phone|blackberry/.test(userAgent);
+    const isTablet = /ipad|android(?!.*mobile)/.test(userAgent);
+    
+    if (isMobile) {
+      window.location.href = "mobile.html";
+    } else if (isTablet) {
+      window.location.href = "tablet.html";
+    } else {
+      window.location.href = "desktop.html";
+    }
+  };
+</script>
+
+</head>
+<body>
+    <div id="img1">
+
+    <video src="20028844-hd_1920_1080_30fps.mp4" autoplay muted loop id="vid"></video>
+    
+    <script>
+        const video = document.getElementById('vid');
+        video.playbackRate = 0.8;
+    </script>
+
+
+            <div id="navBar">
+
+                <div id="navbar1">
+                    <img src="Logo-CAI.png" alt="caiimg" id="caiImg">
+                <button type="button" id="menuButton"><p id="menuIcon">☰</p></button>
+
+                <ul id="menuList" style="display: none; z-index: 100;">
+                    <li><a href="#sezione1">Home</a></li>
+                    <li style="border-bottom-style: solid; border-top-style: solid;border-width: 1px;border-color: rgba(87, 87, 87, 0.231);"><a href="attività.html">Attivit&agrave;</a></li>
+                    <li><a href="#sezione3">Contatti</a></li>
+                  </ul>
+
+                  <script>
+                    document.getElementById("menuButton").addEventListener("click", function() {
+                    const menu = document.getElementById("menuList");
+                    if (menu.style.display === "none") {
+                        menu.style.display = "inline-block";
+                    } else {
+                        menu.style.display = "none";
+                    }
+                    });
+                </script>
+   
+
+             </div> 
+                  <div class="prs">
+                    <div class="prbc">                <div class="prbca">
+                                                      <p>Il sentiero dei monaci</p>
+                   </div>                             </div>
+                   <div class="prbc2">                <div class="prbca">
+                                                     <p>La valle dell'inferno</p>
+                   </div>                            </div>                     
+                 </div>
+                <h1 id="logoH">Le nostre attivit&agrave;</h1>
+             
+                
+
+            </div> 
+
+
+</body>
+</html>
